@@ -21,17 +21,13 @@ int ptinrect(struct point p, struct rect r) {
   return p.x >= r.ll.x && p.x < r.ur.x
     && p.y >= r.ll.y && p.y < r.ur.y;
 }
-
 /* Funkcja rectinrect sprawdza, czy prostokat r1 zawiera sie w prostokacie r2.
-   Sprawdza, czy punkty ll i ur prostok¹ta r1 nale¿¹ do r2, jeœli tak to r1 zawiera siêw r2 */ 
+   Sprawdza, czy punkty ll i ur prostokï¿½ta r1 naleï¿½ï¿½ do r2, jeï¿½li tak to r1 zawiera siï¿½w r2 */ 
 int rectinrect(struct rect r1, struct rect r2){
 
   if(ptinrect(r1.ll,r2) == 1 && ptinrect(r1.ur,r2)==1) {return 1;}
   else return 0;
 }
-
-
-
 
 int main(){
 
@@ -51,7 +47,5 @@ struct point a,b,c,d,e,f;
 
   printf("rectinrect(K,L):%d\n",rectinrect(K,L));
   printf("rectinrect(K,M):%d\n",rectinrect(K,M));
-  
-
-return 0;
+  return 0;
 }
